@@ -1,0 +1,5 @@
+await contract.Fal1out();
+{tx: '0xcc5568340660c3768995ec90fe396eb12c857145eb42035f7893ec79bace3cb7', receipt: {…}, logs: Array(0)}
+
+await contract.owner();
+'0x22Dd089254De7A8Db2C4e60A10c60fea519C6ebC'
